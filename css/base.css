@@ -158,19 +158,9 @@ p + p {
 }
 
 .logo__icono {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.logo__luna {
-  fill: var(--color-secundario);
-}
-
-.logo__agua {
-  fill: none;
-  stroke: var(--color-texto);
-  stroke-width: 2;
-  stroke-linecap: round;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
 }
 
 
