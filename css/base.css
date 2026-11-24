@@ -1,0 +1,348 @@
+/* ==========================================================
+   base.css
+   Variables, reset, tipografía, botones, tarjetas y utilidades
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Bebas+Neue&display=swap");
+
+/* 1. Variables ---------------------------------------------- */
+:root {
+  /* Colores (dragón retro) */
+  --color-fondo: #000000;
+  --color-superficie: #130e10;
+  --color-superficie-alt: #211618;
+  --color-texto: #f5eedc;
+  --color-texto-suave: #c4b9a0;
+  --color-acento: #d92b45;
+  --color-acento-hover: #f47a20;
+  --color-secundario: #622e32;
+  --color-sobre-acento: #ffffff;
+  --color-borde: #4a2528;
+  --color-exito: #3fb8a8;
+  --color-error: #ff4d4d;
+
+  /* Extras del arcoíris */
+  --color-naranja: #f47a20;
+  --color-amarillo: #f6c33b;
+  --color-turquesa: #1f8f8a;
+
+  /* Degradados */
+  --degradado-fondo:
+    radial-gradient(ellipse at 50% 0%, rgba(244, 122, 32, 0.18) 0%, transparent 55%),
+    linear-gradient(180deg, #000000 0%, #1a0b10 55%, #000000 100%);
+  --degradado-arcoiris: linear-gradient(90deg,
+    #d92b45, #f47a20, #f6c33b, #3fb8a8, #1f8f8a);
+
+  /* Tipografías */
+  --fuente-titulos: "Bebas Neue", Impact, sans-serif;
+  --fuente-texto: "Barlow", system-ui, sans-serif;
+
+  /* Espaciados */
+  --espacio-xs: 0.5rem;
+  --espacio-s: 1rem;
+  --espacio-m: 1.5rem;
+  --espacio-l: 3rem;
+  --espacio-xl: 5rem;
+
+  /* Otros */
+  --radio: 0.75rem;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --brillo: 0 0 24px rgba(244, 122, 32, 0.45);
+  --transicion: 0.3s ease;
+  --ancho-max: 1200px;
+}
+
+/* 2. Reset --------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-fondo);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-fondo);
+  background-image: var(--degradado-fondo);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+main {
+  flex: 1;
+}
+
+img,
+svg,
+iframe,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-secundario);
+  outline-offset: 3px;
+}
+
+/* 3. Tipografía ---------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(3rem, 9vw, 6rem); }
+h2 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 4vw, 2rem); }
+
+p + p {
+  margin-top: var(--espacio-s);
+}
+
+.texto-suave {
+  color: var(--color-texto-suave);
+}
+
+.subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-secundario);
+}
+
+/* 4. Logotipo ------------------------------------------------ */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  letter-spacing: 0.14em;
+  color: var(--color-texto);
+}
+
+.logo__icono {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo__luna {
+  fill: var(--color-secundario);
+}
+
+.logo__agua {
+  fill: none;
+  stroke: var(--color-texto);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+
+/* 5. Botones ------------------------------------------------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.7rem 1.75rem;
+  border: 2px solid var(--color-acento);
+  border-radius: var(--radio);
+  background-color: var(--color-acento);
+  color: var(--color-sobre-acento);
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform var(--transicion),
+              background-color var(--transicion),
+              border-color var(--transicion),
+              color var(--transicion),
+              box-shadow var(--transicion);
+}
+
+.boton:hover {
+  background-color: var(--color-acento-hover);
+  border-color: var(--color-acento-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--brillo);
+}
+
+.boton:active {
+  transform: translateY(0);
+}
+
+.boton--secundario {
+  background-color: transparent;
+  color: var(--color-texto);
+  border-color: var(--color-texto);
+}
+
+.boton--secundario:hover {
+  background-color: var(--color-texto);
+  border-color: var(--color-texto);
+  color: var(--color-fondo);
+}
+
+.boton--grande {
+  min-height: 56px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.5rem;
+}
+
+.boton--agotado {
+  background-color: var(--color-superficie-alt);
+  border-color: var(--color-borde);
+  color: var(--color-texto-suave);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* 6. Tarjetas ------------------------------------------------ */
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio-m);
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  max-width: 380px;
+  overflow: hidden;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  transition: transform var(--transicion),
+              box-shadow var(--transicion),
+              border-color var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra);
+  border-color: var(--color-acento);
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--color-superficie-alt);
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--espacio-xs);
+  padding: var(--espacio-m);
+}
+
+.tarjeta__titulo {
+  font-size: 1.75rem;
+}
+
+.tarjeta__meta {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-secundario);
+}
+
+.tarjeta__accion {
+  margin-top: auto;
+  padding-top: var(--espacio-s);
+}
+
+/* 7. Utilidades ---------------------------------------------- */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--espacio-m);
+}
+
+.seccion {
+  padding-block: var(--espacio-xl);
+}
+
+.seccion__cabecera {
+  margin-bottom: var(--espacio-l);
+  text-align: center;
+}
+
+.texto-centrado {
+  text-align: center;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* 8. Media queries ------------------------------------------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .seccion {
+    padding-block: var(--espacio-l);
+  }
+
+  .contenedor {
+    padding-inline: var(--espacio-s);
+  }
+
+  .tarjeta {
+    max-width: 100%;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
