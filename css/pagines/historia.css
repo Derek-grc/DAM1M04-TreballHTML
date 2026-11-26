@@ -1,0 +1,43 @@
+main {
+    display: flex;
+    flex-direction: row;
+    #marco {
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,.4);
+        overflow: hidden;
+        position: relative;
+        p {
+              align-items: center;
+              display: flex;
+              font-size: clamp(1.5rem, 1vw, 1rem);
+              font-weight: 600;
+              justify-content: center;
+              min-height: 1rem;
+              min-width: 1rem;
+              padding: 1rem;
+              text-align: center;
+        }
+    }
+    #slider {
+        padding-left: 5%;
+        button .arrow {
+            fill: white;
+        }
+        button #line {
+            fill: color-mix(in srgb, orange 45%,red);
+            border-radius: 12rem;
+        }
+        button {
+            display: flex;
+            color:  white;
+            font-size: 5rem;
+            text-decoration: none;
+            border:none;
+            background-color: transparent;
+            flex-direction: row;
+            justify-items: center;
+            justify-content: center;
+            gap: 1rem;
+        } 
+    }
+}
