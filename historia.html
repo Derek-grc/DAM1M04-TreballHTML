@@ -46,20 +46,7 @@
 
   <main>
     <div class="container">
-      <!--
-              ============================================================
-              CÓMO AÑADIR UN NUEVO STEP:
-                Copia un <div class="slide"> completo y cambia:
-                  - id del radio:      id="slideN"
-                  - for de los labels: for="slideN"
-                  - data-to del prev:  data-to="N-1"
-                  - data-to del next:  data-to="N+1"
-                  - fecha, img, título, texto
-                Y añade una línea de transform en el CSS.
-              ============================================================
-            -->
       <div class="carousel">
-
         <!-- Radios -->
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
@@ -71,9 +58,7 @@
 
         <!-- Línea de tiempo -->
         <div class="timeline-track">
-          <svg id="" width="500" height="500">
-            <line x1="0" y1="0" x2="500" y2="0" stroke="black" stroke-width="4"/>
-          </svg>
+         <div class="timeline-line"></div>
         </div>
 
         <!-- Dots -->
@@ -90,16 +75,17 @@
         <!-- Diapositivas: cada .slide es autocontenido (contenido + flechas) -->
         <div class="slides">
 
-          <!-- ── SLIDE 1 ── -->
+          <!-- PAG1 -->
           <div class="slide">
+              <!-- Contenido --> 
             <div class="slide_content">
               <span class="slide_fecha">2008</span>
               <img src="img/hero/hero.png" alt="Fundación de Imagine Dragons" class="slide_img">
               <h3 class="slide_titulo">Fundación</h3>
               <p class="slide_texto">Dan Reynolds y Andrew Tolman se conocen en la Universidad Brigham Young.</p>
             </div>
+             <!-- flecha next --> 
             <div class="arrows">
-              <!-- slide 1: no prev, next → 2 -->
               <label for="slide2" class="navArrow next" data-to="2">
                 <svg class="arrow" viewBox="0 0 100 150" focusable="false">
                   <polygon points="43,20,  75,60  ,15,60" />
@@ -109,14 +95,16 @@
             </div>
           </div>
 
-          <!-- ── SLIDE 2 ── -->
+          <!-- PAG2 -->
           <div class="slide">
+             <!-- Contenido --> 
             <div class="slide_content">
               <span class="slide_fecha">2012</span>
               <img src="img/albums/album1.png" alt="Night Visions" class="slide_img">
               <h3 class="slide_titulo">Night Visions</h3>
               <p class="slide_texto">Álbum debut con éxitos como 'Radioactive' y 'Demons'.</p>
             </div>
+             <!-- flecha previous --> 
             <div class="arrows">
               <label for="slide1" class="navArrow prev" data-to="1">
                 <svg class="arrow" viewBox="0 0 100 150" focusable="false">
@@ -124,6 +112,7 @@
                   <rect width="23" height="50" x="33" y="60" />
                 </svg>
               </label>
+             <!-- flecha next --> 
               <label for="slide3" class="navArrow next" data-to="3">
                 <svg class="arrow" viewBox="0 0 100 150" focusable="false">
                   <polygon points="43,20,  75,60  ,15,60" />
@@ -132,8 +121,7 @@
               </label>
             </div>
           </div>
-
-          <!-- ── SLIDE 3 ── -->
+          <!-- PAG3 -->
           <div class="slide">
             <div class="slide_content">
               <span class="slide_fecha">2015</span>
@@ -157,7 +145,7 @@
             </div>
           </div>
 
-          <!-- ── SLIDE 4 ── -->
+          <!-- PAG4 -->
           <div class="slide">
             <div class="slide_content">
               <span class="slide_fecha">2017</span>
@@ -181,7 +169,7 @@
             </div>
           </div>
 
-          <!-- ── SLIDE 5 ── -->
+          <!-- PAG5 -->
           <div class="slide">
             <div class="slide_content">
               <span class="slide_fecha">2018</span>
@@ -205,7 +193,7 @@
             </div>
           </div>
 
-          <!-- ── SLIDE 6 ── -->
+          <!-- PAG6 -->
           <div class="slide">
             <div class="slide_content">
               <span class="slide_fecha">2022</span>
@@ -229,7 +217,7 @@
             </div>
           </div>
 
-          <!-- ── SLIDE 7 ── -->
+          <!-- PAG7 -->
           <div class="slide">
             <div class="slide_content">
               <span class="slide_fecha">2024</span>
