@@ -69,6 +69,7 @@
   z-index: 1;
   width: 100%;
   height: var(--alto-espinas);
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -81,7 +82,7 @@
   fill-opacity: 0.9;
 }
 
-/* Los 6 colores del logotipo se repiten */
+/* Los colores del de las espinas */
 .espina:nth-child(6n+1) { fill: var(--color-superficie-alt); }
 .espina:nth-child(6n+2) { fill: var(--color-superficie-alt); }
 .espina:nth-child(6n+3) { fill: var(--color-superficie-alt); }
@@ -143,10 +144,19 @@
   margin-top: var(--espacio-m);
 }
 
-/* 3. Media queries ------------------------------------------- */
+/* 3. Novedades ----------------------------------------------- */
+.novedades .tarjeta {
+  border-top: 4px solid var(--color-acento);
+}
+
+/* 4. Media queries ------------------------------------------- */
 @media (max-width: 768px) {
   .hero {
-    min-height: 75vh;
+    --alto-espinas: 64px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: auto;
   }
 
   .hero__interruptor {
@@ -154,21 +164,40 @@
     right: var(--espacio-xs);
   }
 
-  .hero__contenido {
-    padding-block: 5rem var(--espacio-l);
+  /* La foto pasa a ser un bloque en el flujo, con toda la banda visible */
+  .hero__fondo {
+    position: relative;
+    inset: auto;
+    width: 100%;
   }
 
+  .hero__imagen {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* El borde inferior de la foto se funde con el fondo negro */
   .hero__fondo::after {
-    background:
-      linear-gradient(0deg, rgba(16, 16, 17, 0.9) 0%, rgba(19, 19, 20, 0.55) 100%);
+    background: linear-gradient(0deg, var(--color-fondo) 0%, transparent 45%);
   }
 
-  .hero__botones,
-  .album-destacado__botones {
-    flex-direction: column;
+  /* El texto va debajo de la foto */
+  .hero__contenido {
+    padding-block: var(--espacio-m) var(--espacio-l);
   }
 
-  .album-destacado__contenedor {
-    gap: var(--espacio-m);
+  /* Se recorta el SVG: solo se ven las espinas centrales, más anchas */
+  .hero__espinas svg {
+    width: 300%;
+    max-width: none;
+    margin-left: -100%;
+  }
+  .album-destacado__portada {
+    flex: 0 1 260px;
+    max-width: 260px;
+  }
+
+  .album-destacado__imagen {
+    height: auto;
   }
 }
