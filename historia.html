@@ -2,97 +2,292 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página oficial de Imagine Dragons">
-    <title>Imagine Dragons | Historia</title>
-    <link rel="icon" href="img/logo/Logo.png" type="image/svg+xml">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/animacions.css">
-    <link rel="stylesheet" href="css/interactiu.css">
-    <link rel="stylesheet" href="css/pagines/historia.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página oficial de Imagine Dragons">
+  <title>Imagine Dragons | Historia</title>
+  <link rel="icon" href="img/logo/Logo.png" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animacions.css">
+  <link rel="stylesheet" href="css/interactiu.css">
+  <link rel="stylesheet" href="css/pagines/historia.css">
 </head>
 
 <body>
 
-    <header class="header">
+  <header class="header">
     <div class="header__contenedor contenedor">
-
-        <a href="index.html" class="logo" aria-label="Imagine Dragons, ir al inicio">
+      <a href="index.html" class="logo" aria-label="Imagine Dragons, ir al inicio">
         <img src="img/logo/Logo.png" alt="Logotipo de Imagine Dragons" class="logo__icono" width="80" height="40">
         <span>Imagine Dragons</span>
-        </a>
+      </a>
 
-        <!-- El checkbox debe ir ANTES del label y del nav (usamos ~) -->
-        <input type="checkbox" id="menu-toggle" class="menu__check">
-        <label for="menu-toggle" class="menu__boton" aria-label="Abrir o cerrar el menú">
+      <input type="checkbox" id="menu-toggle" class="menu__check">
+      <label for="menu-toggle" class="menu__boton" aria-label="Abrir o cerrar el menú">
         <span class="menu__barra"></span>
         <span class="menu__barra"></span>
         <span class="menu__barra"></span>
-        </label>
+      </label>
 
-        <nav class="menu" aria-label="Navegación principal">
+      <nav class="menu" aria-label="Navegación principal">
         <ul class="menu__lista">
-            <li><a href="index.html" class="menu__enlace">Inicio</a></li>
-            <li><a href="musica.html" class="menu__enlace">Música</a></li>
-            <li><a href="historia.html" class="menu__enlace" aria-current="page">Historia</a></li>
-            <li><a href="concerts.html" class="menu__enlace">Conciertos</a></li>
-            <li><a href="contacte.html" class="menu__enlace">Contacto</a></li>
+          <li><a href="index.html" class="menu__enlace">Inicio</a></li>
+          <li><a href="musica.html" class="menu__enlace">Música</a></li>
+          <li><a href="historia.html" class="menu__enlace" aria-current="page">Historia</a></li>
+          <li><a href="concerts.html" class="menu__enlace">Conciertos</a></li>
+          <li><a href="contacte.html" class="menu__enlace">Contacto</a></li>
         </ul>
-        </nav>
+      </nav>
 
     </div>
-    </header>
+  </header>
 
-    <main>
-    </main>
+  <main>
+    <div class="container">
+      <div id="historia">
+          <h1>Historia</h1>
+          <div>
+            <h2>Biografia</h2>
+            <p> Imagine Dragons es un grupo de pop rock estadounidense formado en 2008 en Las Vegas. Compuesto por el cantante principal Dan Reynolds, el guitarrista Wayne Sermon y el bajista Ben McKee, la banda se impuso rápidamente en la escena musical internacional.  </p>
+          </div>
+          <div>
+          <h2>Trajectoria</h2>
+          <p>
+            Imagine Dragons comenzó en 2008 cuando el vocalista Dan Reynolds y el baterista Andrew Tolman se unieron en Utah antes de trasladarse a Las Vegas, donde consolidaron la banda junto a Wayne Sermon y Ben McKee. Tras publicar varios EP independientes y dar el salto a la fama mundial en 2012 con su álbum debut Night Visions y éxitos como "Radioactive" (que les valió un premio Grammy), se convirtieron en un fenómeno global del pop rock con discos multiplatino como Smoke + Mirrors (2015), Evolve (2017), Origins (2018) y Mercury – Acts 1 & 2 (2021–2022), además de impulsar su labor benéfica a través de The Tyler Robinson Foundation. En la actualidad, tras la salida oficial del baterista Daniel Platzman en agosto de 2024 (con Andrew Tolman apoyándolos en directo), la agrupación continúa activa como trío oficial integrado por Reynolds, Sermon y McKee: después de promocionar su sexto álbum de estudio LOOM (2024) con una extensa gira mundial por estadios durante 2025 y lanzar la edición de archivo Reflections (From The Vault Of Smoke + Mirrors), el grupo se encuentra trabajando en el estudio en nueva música.
+          </p>
+          </div>
+      </div>
+      <h2 id="subtitle">carrusel</h2>
+      <div class="carousel">
+        <!-- Radios -->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide5">
+        <input type="radio" name="slide" id="slide6">
+        <input type="radio" name="slide" id="slide7">
 
-    <footer class="footer">
-  <div class="footer__contenedor contenedor">
+        <!-- Línea de tiempo -->
+        <div class="timeline-track">
+         <div class="timeline-line"></div>
+        </div>
 
-    <ul class="redes" aria-label="Redes sociales">
-      <li>
-        <a href="https://www.instagram.com/imaginedragons/" class="redes__enlace" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle class="redes__relleno" cx="17.5" cy="6.5" r="1"/>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.tiktok.com/@imaginedragons?lang=es" class="redes__enlace" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/>
-            <path d="M14 4c.5 2.5 2 4 5 4.2"/>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UCT9zcQNlyht7fRlcjmflRSA" class="redes__enlace" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <rect x="2" y="5" width="20" height="14" rx="4"/>
-            <path class="redes__relleno" d="M10 9l5 3-5 3z"/>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q?autoplay=true" class="redes__enlace" target="_blank" rel="noopener" aria-label="Spotify">
-          <svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M7 9.5c3.5-1 7.5-.7 10.5 1"/>
-            <path d="M7.5 12.8c3-.8 6-.5 8.5 1"/>
-            <path d="M8 16c2.5-.6 5-.4 7 .8"/>
-          </svg>
-        </a>
-      </li>
-    </ul>
+        <!-- Dots -->
+        <div class="dots">
+          <label class="dot" for="slide1"><span class="dot_label">2008</span></label>
+          <label class="dot" for="slide2"><span class="dot_label">2012</span></label>
+          <label class="dot" for="slide3"><span class="dot_label">2015</span></label>
+          <label class="dot" for="slide4"><span class="dot_label">2017</span></label>
+          <label class="dot" for="slide5"><span class="dot_label">2018</span></label>
+          <label class="dot" for="slide6"><span class="dot_label">2022</span></label>
+          <label class="dot" for="slide7"><span class="dot_label">2024</span></label>
+        </div>
 
-    <p class="footer__copy">&copy; 2026 Imagine Dragons. Proyecto académico sin fines comerciales.</p>
+        <div class="slides">
 
-  </div>
-</footer>
+          <!-- PAG1 -->
+          <div class="slide">
+              <!-- Contenido --> 
+            <div class="slide_content">
+              <span class="slide_fecha">2008</span>
+              <img src="img/hero/hero.png" alt="Fundación de Imagine Dragons" class="slide_img">
+              <h3 class="slide_titulo">Fundación</h3>
+              <p class="slide_texto">Dan Reynolds y Andrew Tolman se conocen en la Universidad Brigham Young.</p>
+            </div>
+             <!-- flecha next --> 
+            <div class="arrows">
+              <label for="slide2" class="navArrow next" data-to="2">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+          <!-- PAG2 -->
+          <div class="slide">
+             <!-- Contenido --> 
+            <div class="slide_content">
+              <span class="slide_fecha">2012</span>
+              <img src="img/albums/album1.png" alt="Night Visions" class="slide_img">
+              <h3 class="slide_titulo">Night Visions</h3>
+              <p class="slide_texto">
+               fue el primer album y un éxito con sencillos destacados como "Radioactive" y "Demons". Este último fue reconocido como uno de los mayores éxitos de rock del año por Rolling Stone. 
+              </p>
+            </div>
+             <!-- flecha previous --> 
+            <div class="arrows">
+              <label for="slide1" class="navArrow prev" data-to="1">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+             <!-- flecha next --> 
+              <label for="slide3" class="navArrow next" data-to="3">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+          <!-- PAG3 -->
+          <div class="slide">
+            <div class="slide_content">
+              <span class="slide_fecha">2015</span>
+              <img src="img/albums/album2.png" alt="Smoke + Mirrors" class="slide_img">
+              <h3 class="slide_titulo">Smoke + Mirrors</h3>
+              <p class="slide_texto">Segundo álbum de estudio, lanzado en 2015, también tuvo un gran éxito, alcanzando el primer lugar en las listas de Estados Unidos, Canadá y Reino Unido. En 2017, su tercer álbum, "Evolve", dio lugar a sencillos exitosos como "Believer", "Thunder" y "Whatever It Takes", consolidando su posición como un grupo importante en la escena musical mundial. .</p>
+            </div>
+            <div class="arrows">
+              <label for="slide2" class="navArrow prev" data-to="2">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+              <label for="slide4" class="navArrow next" data-to="4">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <!-- PAG4 -->
+          <div class="slide">
+            <div class="slide_content">
+              <span class="slide_fecha">2017</span>
+              <img src="img/albums/album3.png" alt="Evolve" class="slide_img">
+              <h3 class="slide_titulo">Evolve</h3>
+              <p class="slide_texto">Tercer álbum con éxitos como 'Believer' y 'Thunder'.</p>
+            </div>
+            <div class="arrows">
+              <label for="slide3" class="navArrow prev" data-to="3">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+              <label for="slide5" class="navArrow next" data-to="5">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <!-- PAG5 -->
+          <div class="slide">
+            <div class="slide_content">
+              <span class="slide_fecha">2018</span>
+              <img src="img/albums/album4.png" alt="Origins" class="slide_img">
+              <h3 class="slide_titulo">Origins</h3>
+              <p class="slide_texto">Cuarto álbum, continuación de Evolve con sonidos experimentales.</p>
+            </div>
+            <div class="arrows">
+              <label for="slide4" class="navArrow prev" data-to="4">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+              <label for="slide6" class="navArrow next" data-to="6">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <!-- PAG6 -->
+          <div class="slide">
+            <div class="slide_content">
+              <span class="slide_fecha">2022</span>
+              <img src="img/albums/album5.png" alt="Mercury – Acts 1 & 2" class="slide_img">
+              <h3 class="slide_titulo">Mercury – Acts 1 & 2</h3>
+              <p class="slide_texto">Doble álbum con colaboraciones y exploración de nuevos géneros.</p>
+            </div>
+            <div class="arrows">
+              <label for="slide5" class="navArrow prev" data-to="5">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+              <label for="slide7" class="navArrow next" data-to="7">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+            </div>
+          </div>
+
+          <!-- PAG7 -->
+          <div class="slide">
+            <div class="slide_content">
+              <span class="slide_fecha">2024</span>
+              <img src="img/albums/album6.png" alt="Loom" class="slide_img">
+              <h3 class="slide_titulo">Loom</h3>
+              <p class="slide_texto">Sexto álbum de estudio, una nueva era para la banda, continuando su evolución musical y su compromiso con sus seguidores.</p>
+            </div>
+            <div class="arrows">
+              <label for="slide6" class="navArrow prev" data-to="6">
+                <svg class="arrow" viewBox="0 0 100 150" focusable="false">
+                  <polygon points="43,20,  75,60  ,15,60" />
+                  <rect width="23" height="50" x="33" y="60" />
+                </svg>
+              </label>
+              <!-- slide 7: no next -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor contenedor">
+      <ul class="redes" aria-label="Redes sociales">
+        <li><a href="https://www.instagram.com/imaginedragons/" class="redes__enlace" target="_blank" rel="noopener"
+            aria-label="Instagram"><svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle class="redes__relleno" cx="17.5" cy="6.5" r="1" />
+            </svg></a></li>
+        <li><a href="https://www.tiktok.com/@imaginedragons?lang=es" class="redes__enlace" target="_blank"
+            rel="noopener" aria-label="TikTok"><svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true"
+              focusable="false">
+              <path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5" />
+              <path d="M14 4c.5 2.5 2 4 5 4.2" />
+            </svg></a></li>
+        <li><a href="https://www.youtube.com/channel/UCT9zcQNlyht7fRlcjmflRSA" class="redes__enlace" target="_blank"
+            rel="noopener" aria-label="YouTube"><svg class="redes__icono" viewBox="0 0 24 24" aria-hidden="true"
+              focusable="false">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <path class="redes__relleno" d="M10 9l5 3-5 3z" />
+            </svg></a></li>
+        <li><a href="https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q?autoplay=true" class="redes__enlace"
+            target="_blank" rel="noopener" aria-label="Spotify"><svg class="redes__icono" viewBox="0 0 24 24"
+              aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M7 9.5c3.5-1 7.5-.7 10.5 1" />
+              <path d="M7.5 12.8c3-.8 6-.5 8.5 1" />
+              <path d="M8 16c2.5-.6 5-.4 7 .8" />
+            </svg></a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2026 Imagine Dragons. Proyecto académico sin fines comerciales.</p>
+    </div>
+  </footer>
 
 </body>
+
 </html>
